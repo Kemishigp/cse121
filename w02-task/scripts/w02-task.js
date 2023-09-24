@@ -42,7 +42,7 @@ const favoriteFoods = ["Pizza", "Sushi", "Tacos"];
 // const foodsAsString = favoriteFoods.join(', ');
 
 // Set the innerHTML of the food element
-foodElement.innerHTML = `My favorite foods are: ${favoriteFoods}`;
+foodElement.innerHTML = `${favoriteFoods}`;
 // Add a new favorite food and print it out
 const anotherFavoriteFood = "Nachos";
 favoriteFoods.push(anotherFavoriteFood);
