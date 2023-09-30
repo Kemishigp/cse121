@@ -87,7 +87,23 @@ document.querySelector('#evens').innerHTML = numbersArray.filter(number => numbe
 
 
 /* Output Sum of Org. Array */
+document.querySelector('#sumOfArray').innerHTML = numbersArray.reduce((sum, number) => sum + number)
 
 /* Output Multiplied by 2 Array */
+document.querySelector('#multiplied').innerHTML= numbersArray.map(number => number * 2)
 
 /* Output Sum of Multiplied by 2 Array */
+
+// Use the map() method to multiply each element by 2
+const multipliedNumbers = numbersArray.map(number => number * 2);
+
+// Use the reduce() method to sum the multiplied numbers
+const summ = multipliedNumbers.reduce((sum, number) => sum + number);
+
+// Get the HTML element with the ID "sumOfMultiplied" using querySelector
+const sumOfMultipliedElement = document.querySelector("#sumOfMultiplied");
+
+// Set the innerHTML of the "sumOfMultiplied" element to display the sum of multiplied numbers
+sumOfMultipliedElement.innerHTML = summ;
+
+
