@@ -65,14 +65,28 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 
 
 /* Decision Structure */
+const currentDate = new Date();
+const currentYear = new Date().getFullYear();
+
+document.getElementById("year").value = currentYear;
+
 
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.getElementById("array").value = numbersArray;
+
+oddsElement.innerHTML = `Odd Numbers: ${oddNumbersString}`;
+
 
 /* Output Odds Only Array */
+document.querySelector('#odds').innerHTML = numbersArray.filter(number => number % 2 === !0);
+
 
 /* Output Evens Only Array */
+document.querySelector('#evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
+
 
 /* Output Sum of Org. Array */
 
