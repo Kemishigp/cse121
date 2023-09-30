@@ -17,11 +17,11 @@ document.querySelector('#sum').value = add(addNumber1, addNumber2); //Get the su
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 /* Function Expression - Subtract Numbers */
 // Inside this function, you can perform the subtraction operation
-function subtract(number1, number2) {
+const subtract = function(number1, number2) {
   return number1-number2; // Return the result of the subtraction
 }  
 // subtract1, subtract2, subtractNumbers, and difference.
-function subtractNumbers(){
+const subtractNumbers = function(){
 let subtractNumber1 = Number(document.querySelector('#subtract1').value); //Get the first value
 let subtractNumber2 = Number(document.querySelector('#subtract2').value); //Get the second value
 document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2); //Get the sum of both values
@@ -30,6 +30,19 @@ document.querySelector('#difference').value = subtract(subtractNumber1, subtract
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
+// Using arrow functions, repeat the items in Step 2 with arrow functions named 
+// multiply and multiplyNumbers and HTML form controls with IDs of factor1, factor2, multiplyNumbers, and product.
+const multiply = (number1,number2) =>{
+  return number1 * number2;
+}
+
+const multiplyNumbers = () => {
+  let multiplyNumber1 = Number(document.querySelector('#factor1').value);
+  let multiplyNumber2 = Number(document.querySelector('#factor2').value);
+  document.querySelector('#product').value = subtract(multiplyNumber1, multiplyNumber2); //Get the sum of both values
+
+}
+document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 
 /* Open Function Use - Divide Numbers */
