@@ -9,8 +9,6 @@ function add(number1, number2) {
   }  
   
 function addNumbers(){
-  const adder1 = document.querySelector('#add1').value;
-  adder1 .value = 45;
 let addNumber1 = Number(document.querySelector('#add1').value); //Get the first value
 let addNumber2 = Number(document.querySelector('#add2').value); //Get the second value
 document.querySelector('#sum').value = add(addNumber1, addNumber2); //Get the sum of both values
