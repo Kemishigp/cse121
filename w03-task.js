@@ -4,15 +4,18 @@
 /* Function Definition - Add Numbers */
 function add(number1, number2) {
     // Inside this function, you can perform the addition operation
-    const sum = number1 + number2;
-    return sum; // Return the result of the addition
+    // const sum = number1 + number2;
+    return number1+number2; // Return the result of the addition
   }  
+  
 function addNumbers(){
-
+  const adder1 = document.querySelector('#add1').value;
+  adder1 .value = 45;
 let addNumber1 = Number(document.querySelector('#add1').value); //Get the first value
 let addNumber2 = Number(document.querySelector('#add2').value); //Get the second value
 document.querySelector('#sum').value = add(addNumber1, addNumber2); //Get the sum of both values
 }
+
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 /* Function Expression - Subtract Numbers */
 
