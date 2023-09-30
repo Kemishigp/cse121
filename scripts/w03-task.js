@@ -16,7 +16,18 @@ document.querySelector('#sum').value = add(addNumber1, addNumber2); //Get the su
 
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 /* Function Expression - Subtract Numbers */
+// Inside this function, you can perform the subtraction operation
+function subtract(number1, number2) {
+  return number1-number2; // Return the result of the subtraction
+}  
+// subtract1, subtract2, subtractNumbers, and difference.
+function subtractNumbers(){
+let subtractNumber1 = Number(document.querySelector('#subtract1').value); //Get the first value
+let subtractNumber2 = Number(document.querySelector('#subtract2').value); //Get the second value
+document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2); //Get the sum of both values
+}
 
+document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
 
