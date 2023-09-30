@@ -40,12 +40,28 @@ const multiplyNumbers = () => {
   let multiplyNumber1 = Number(document.querySelector('#factor1').value);
   let multiplyNumber2 = Number(document.querySelector('#factor2').value);
   document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2); //Get the sum of both values
-
 }
+
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 
 /* Open Function Use - Divide Numbers */
+
+// Using any combination of function declaration types, repeat the items in Step 2 with new functions named 
+// divide and divideNumbers and HTML form controls with IDs of dividend, divisor, divideNumbers, and quotient.
+function divide(number1, number2) {
+  // Inside this function, you can perform the addition operation
+  // const sum = number1 + number2;
+  return number1 / number2; // Return the result of the addition
+}  
+
+function divideNumbers(){
+let divideNumber1 = Number(document.querySelector('#dividend').value); //Get the first value
+let divdeNumber2 = Number(document.querySelector('#divisor').value); //Get the second value
+document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2); //Get the sum of both values
+}
+
+document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 
 /* Decision Structure */
