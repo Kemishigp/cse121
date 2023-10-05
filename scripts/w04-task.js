@@ -8,7 +8,7 @@ favoriteFoods:["Pizza", "Sushi", "Tacos"],
 hobbies:["Reading", "Running", "Piano"],
 placesLived:[]
 };
-g
+/* Populate Profile Object with placesLive objects */
 // This occurs outside of the object definition.
 myProfile.placesLived.push(
   {
@@ -29,13 +29,12 @@ myProfile.placesLived.push(
     }
   );
 
-/* Populate Profile Object with placesLive objects */
 
 
 
 
 /* DOM Manipulation - Output */
-
+document.querySelector('#name').textContent = myProfile.name;
 /* Name */
 
 /* Photo with attributes */
