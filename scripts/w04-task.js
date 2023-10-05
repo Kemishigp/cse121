@@ -28,13 +28,10 @@ myProfile.placesLived.push(
       length: '7 years'
     }
   );
-
-
-
-
-
 /* DOM Manipulation - Output */
 document.querySelector('#name').textContent = myProfile.name;
+document.querySelector('#photo') = myProfile.photo;
+document.querySelector('#name');
 /* Name */
 
 /* Photo with attributes */
