@@ -29,18 +29,29 @@ myProfile.placesLived.push(
     }
   );
 /* DOM Manipulation - Output */
-document.querySelector('#name').textContent = myProfile.name;
-document.querySelector('#photo').src = myProfile.photo;
-document.querySelector('#photo').alt = myProfile.name;
 /* Name */
+document.querySelector('#name').textContent = myProfile.name;
 
 /* Photo with attributes */
+document.querySelector('#photo').src = myProfile.photo;
+document.querySelector('#photo').alt = myProfile.name;
 
 
 /* Favorite Foods List*/
+// Object -> Property -> foreach loop -> function(food): create ali element: li has contect = food: append food into fav foods
+myProfile.favoriteFoods.forEach(food => {
+    let li = document.createElement('li');
+    li.textContent = food;
+    document.querySelector('#favorite-foods').appendChild(li);
+  });
 
 
 /* Hobbies List */
+myProfile.hobbies.forEach(hobby => {
+    let li = document.createElement('ul');
+    li.textContent = hobby;
+    document.querySelector('#hobbies').appendChild(li);
+  });
 
 
 /* Places Lived DataList */
