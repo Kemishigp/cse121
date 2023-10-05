@@ -13,9 +13,21 @@ g
 myProfile.placesLived.push(
   {
     place: 'Mexico City',
-    length: '3 years'
+    length: '13 years'
   }
 );
+myProfile.placesLived.push(
+    {
+      place: 'Rexburg, Idaho',
+      length: '3 years'
+    }
+  );
+  myProfile.placesLived.push(
+    {
+      place: 'Lima,Peru',
+      length: '7 years'
+    }
+  );
 
 /* Populate Profile Object with placesLive objects */
 
