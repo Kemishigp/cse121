@@ -2,8 +2,8 @@
 
 /* Profile Object  */
 
-let myProfile = {name:"Kemish",
-photo:"/Users/kemish/Documents/CODING_HW/cse121b/images/Nevado.jpg",
+let myProfile = {name:"Kemish Gomez",
+photo:"images/Nevado.jpg",
 favoriteFoods:["Pizza", "Sushi", "Tacos"],
 hobbies:["Reading", "Running", "Piano"],
 placesLived:[]
@@ -30,8 +30,8 @@ myProfile.placesLived.push(
   );
 /* DOM Manipulation - Output */
 document.querySelector('#name').textContent = myProfile.name;
-document.querySelector('#photo') = myProfile.photo;
-document.querySelector('#name');
+document.querySelector('#photo').src = myProfile.photo;
+document.querySelector('#photo').alt = myProfile.name;
 /* Name */
 
 /* Photo with attributes */
