@@ -24,7 +24,7 @@ myProfile.placesLived.push(
   );
   myProfile.placesLived.push(
     {
-      place: 'Lima,Peru',
+      place: 'Lima, Peru',
       length: '7 years'
     }
   );
@@ -48,16 +48,16 @@ myProfile.favoriteFoods.forEach(food => {
 
 /* Hobbies List */
 myProfile.hobbies.forEach(hobby => {
-    let ul = document.createElement('ul');
-    ul.textContent = hobby;
-    document.querySelector('#hobbies').appendChild(ul);
+    let li = document.createElement('li');
+    li.textContent = hobby;
+    document.querySelector('#hobbies').appendChild(li);
   });
 
 
 /* Places Lived DataList */
 // DT place/ DD Length
 myProfile.placesLived.forEach(lived => {
-    let dt = document.createElement('dt');
+    let dt = document.createElement("dt");
     let dd = document.createElement('dd');
     dt.textContent = lived.place;
     dd.textContent = lived.length;
