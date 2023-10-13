@@ -45,6 +45,8 @@ const getTemples = async () => {
   
       // Assign the temple data to the global templeList array
       templeList = templeData;
+      // Call the displayTemples function and pass the templeList
+      displayTemples(templeList);
     } catch (error) {
       console.error('Error fetching temple data:', error);
     }
@@ -52,9 +54,6 @@ const getTemples = async () => {
   
   // Call the getTemples function to fetch and populate temple data
   getTemples();
-  
-
-
 /* reset Function */
 
 
