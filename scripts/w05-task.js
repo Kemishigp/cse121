@@ -30,6 +30,29 @@ const displayTemples = (temples) => {
   
 
 /* async getTemples Function using fetch()*/
+const getTemples = async () => {
+    try {
+      // Use the fetch method to retrieve temple data from the specified URL
+      const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
+  
+      // Check if the response is OK (status code 200)
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      // Convert the fetch response to a JavaScript object
+      const templeData = await response.json();
+  
+      // Assign the temple data to the global templeList array
+      templeList = templeData;
+    } catch (error) {
+      console.error('Error fetching temple data:', error);
+    }
+  };
+  
+  // Call the getTemples function to fetch and populate temple data
+  getTemples();
+  
 
 
 /* reset Function */
