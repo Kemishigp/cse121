@@ -59,10 +59,9 @@ const getTemples = async () => {
       console.error('Error fetching temple data:', error);
     }
   };
-//   DIFF S
+
   // Call the getTemples function to fetch and populate temple data
   getTemples();
-// DIFF E
 
 
 
@@ -86,20 +85,23 @@ const sortBy = (temples) => {
   
     // Step 3: Use a switch statement to filter the temples based on the selected option
     switch (filter) {
-      case "utah":
-        // Filter for temples located in Utah
+    // Filter for temples located in Utah
+    case "utah":
+        // Log to see what temples are included
+        console.log(temples.filter((temple) => temple.location.includes("Utah")));
         displayTemples(temples.filter((temple) => temple.location.includes("Utah")));
         break;
-        // Filter for temples not located in Utah
-        case "nonutah":
-            displayTemples(temples.filter((temple) => !temple.location.includes("Utah")));
-            break;        
-      case "older":
-        // Filter for temples dedicated before 1950
+    case "nonutah":
+        // Log to see what temples are included
+        console.log(temples.filter((temple) => !temple.location.includes("Utah")));
+        displayTemples(temples.filter((temple) => !temple.location.includes("Utah")));
+        break;   
+    // Filter for temples dedicated before 1950
+        case "older":
         displayTemples(temples.filter((temple) => new Date(temple.dedicated) < new Date(1950, 0, 1)));
         break;
+    // Display all temples (no filter)
       case "all":
-        // Display all temples (no filter)
         displayTemples(temples);
         break;
       default:
