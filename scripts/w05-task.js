@@ -61,7 +61,7 @@ const getTemples = async () => {
   };
 //   DIFF S
   // Call the getTemples function to fetch and populate temple data
-//   getTemples();
+  getTemples();
 // DIFF E
 
 
@@ -90,10 +90,10 @@ const sortBy = (temples) => {
         // Filter for temples located in Utah
         displayTemples(temples.filter((temple) => temple.location.includes("Utah")));
         break;
+        // Filter for temples not located in Utah
         case "nonutah":
             displayTemples(temples.filter((temple) => !temple.location.includes("Utah")));
-            break;
-          
+            break;        
       case "older":
         // Filter for temples dedicated before 1950
         displayTemples(temples.filter((temple) => new Date(temple.dedicated) < new Date(1950, 0, 1)));
