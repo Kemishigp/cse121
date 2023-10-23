@@ -16,7 +16,7 @@ function getWeatherData(location) {
             if (response.status === 200) {
                 return response.json();
             } else {
-                throw new Error(`Faidfdfsled to fetch data. Response status: ${response.status}`);
+                throw new Error(`Failed to fetch data. Response status: ${response.status}`);
             }
         })
         .then(data => {
