@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-    
+
 <body>
     <nav>
         <ul id="menu">
-<!--             <li><a id="toggleMenu">&equiv;</a></li> -->
+            <li><a id="toggleMenu">&equiv;</a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="w01-task.html">W1 Task</a></li>
             <li><a href="w03-task.html" class="active">W3 Task</a></li>
@@ -16,19 +22,22 @@
             <li><a href="w05-task.html">W5 Task</a></li>
             <li><a href="project.html">Project</a></li>
         </ul>
-    </nav>>
+    </nav>
 
-    <h1>Weather Forecast</h1>
-    <input type="text" id="locationInput" placeholder="Enter city or zip code">
-    <button id="fetchWeather">Get Weather</button>
-    <div id="weatherInfo">
-        <h2>Weather Information</h2>
-        <p id="location"></p>
-        <p id="temperature"></p>
-        <p id="description"></p>
-        <img id="weatherIcon" src="" alt="Weather Icon">
-    </div>
-    <p id="error"></p>
+    <main>
+        <h1>Weather Forecast</h1>
+        <input type="text" id="locationInput" placeholder="Enter city or zip code">
+        <button id="fetchWeather">Get Weather</button>
+        <div id="weatherInfo">
+            <h2>Weather Information</h2>
+            <p id="location"></p>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <img id="weatherIcon" src="" alt="Weather Icon">
+        </div>
+        <p id="error"></p>
+    </main>
+
     <script type="module" src="scripts/project.js"></script>
 </body>
 </html>
