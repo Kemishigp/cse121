@@ -51,16 +51,18 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Change from column to row */
     align-items: center;
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 0 auto;
 }
+
 
 nav ul li {
     flex: 1 1 auto;
@@ -97,5 +99,6 @@ nav ul li a:hover {
 }
 
 main {
+     margin-top: 60px;
     padding-top: 60px; /* Adjust the value as needed */
 }
