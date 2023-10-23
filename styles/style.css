@@ -95,3 +95,7 @@ nav ul li a:hover {
     background-color: #efefef;
     color: black;
 }
+
+main {
+    padding-top: 60px; /* Adjust the value as needed */
+}
