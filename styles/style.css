@@ -76,7 +76,7 @@ nav ul li:first-child a {
 }
 
 nav ul li {
-/*     display: none; */
+    display: none;
     list-style: none;
     margin: 10px;
 }
