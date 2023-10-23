@@ -1,5 +1,5 @@
 // API KEY
-const apiKey = 'b972ab33e7e440efa30215736232210';
+const apiKey = '%20b972ab33e7e440efa30215736232210';
 
 document.querySelector('#fetchWeather').addEventListener('click', () => {
     const location = document.querySelector('#locationInput').value;
@@ -8,6 +8,7 @@ document.querySelector('#fetchWeather').addEventListener('click', () => {
 
 function getWeatherData(location) {
     // Construct the WeatherAPI API URL
+                    // http://api.weatherapi.com/v1/forecast.json?key=%20b972ab33e7e440efa30215736232210&q=83440      &days=1&aqi=no&alerts=no
     const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=1&aqi=no&alerts=no`;
 
     fetch(apiUrl)
