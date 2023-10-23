@@ -1,5 +1,5 @@
 // API KEY
-const apiKey = '%20b972ab33e7e440efa30215736232210';
+const apiKey = 'b972ab33e7e440efa30215736232210';
 
 document.querySelector('#fetchWeather').addEventListener('click', () => {
     const location = document.querySelector('#locationInput').value;
