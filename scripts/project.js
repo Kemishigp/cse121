@@ -45,7 +45,7 @@ function getWeatherData(location) {
         });
 }
 function displayCurrentData(data){
-    document.querySelector('#error').textContent = '';
+    document.querySelector('#errorC').textContent = '';
     document.querySelector('#temperatureC').textContent = `Temperature: ${data.current.temp_c}°C / ${data.current.temp_f}°F`;
     document.querySelector('#descriptionC').textContent = `Conditions: ${data.current.condition.text}`;
     document.querySelector('#weatherIconC').src = data.current.condition.icon; 
