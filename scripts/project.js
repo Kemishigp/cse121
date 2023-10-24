@@ -66,3 +66,9 @@ function showError(message) {
     document.querySelector('#description').textContent = '';
     document.querySelector('#weatherIcon').src = '';
 }
+function showErrorC(message) {
+    document.querySelector('#errorC').textContent = message;
+    document.querySelector('#temperatureC').textContent = '';
+    document.querySelector('#descriptionC').textContent = '';
+    document.querySelector('#weatherIconC').src = '';
+}
