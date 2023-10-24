@@ -30,15 +30,15 @@ function getWeatherData(location) {
 function displayWeatherData(data) {
     document.querySelector('#location').textContent = `Location: ${data.location.name}, ${data.location.country}`;
     document.querySelector('#error').textContent = '';
-    // FORECAST DATA
-    document.querySelector('#temperatureMax').textContent = `Temperature: ${data.forecast.forecastday.maxtemp_c}°C/${data.forecast.forecastday.maxtemp_f}°F`;
-    document.querySelector('#temperatureMin').textContent = `Temperature: ${data.forecast.forecastday.mintemp_c}°C/${data.forecast.forecastday.mintemp_c}°C`;
-    document.querySelector('#descriptionF').textContent = `Conditions: ${data.forecast.forecastday.condition.text}`;
-    document.querySelector('#weatherIconF').src = data.forecast.forecastday.condition.icon;
     // CURRENT DATA
     document.querySelector('#temperature').textContent = `Temperature: ${data.current.temp_c}°C/${data.current.temp_f}°F`;
     document.querySelector('#description').textContent = `Conditions: ${data.current.condition.text}`;
     document.querySelector('#weatherIcon').src = data.current.condition.icon;
+    // FORECAST DATA
+    document.querySelector('#temperatureMax').textContent = `Max Temperature: ${data.forecast.forecastday.maxtemp_c}°C/${data.forecast.forecastday.maxtemp_f}°F`;
+    document.querySelector('#temperatureMin').textContent = `Min Temperature: ${data.forecast.forecastday.mintemp_c}°C/${data.forecast.forecastday.mintemp_c}°C`;
+    document.querySelector('#descriptionF').textContent = `Conditions: ${data.forecast.forecastday.condition.text}`;
+    document.querySelector('#weatherIconF').src = data.forecast.forecastday.condition.icon;
 }
 
 function showError(message) {
