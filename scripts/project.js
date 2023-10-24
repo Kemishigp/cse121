@@ -12,21 +12,8 @@ function getWeatherData(location) {
     const apiUrlC = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`;
 
     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=1&aqi=no&alerts=no`;
+// FETCH I ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    fetch(apiUrl)
-        .then(response => {
-            if (response.status === 200) {
-                return response.json();
-            } else {
-                throw new Error(`Failed to fetch data. Response status: ${response.status}`);
-            }
-        })
-        .then(data => {
-            displayWeatherData(data);
-        })
-        .catch(error => {
-            showError(error.message);
-        });
     fetch(apiUrlC)
         .then(response => {
             if (response.status === 200) {
@@ -41,8 +28,23 @@ function getWeatherData(location) {
         .catch(error => {
             showError(error.message);
         });
+// FETCH II ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    fetch(apiUrl)
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error(`Failed to fetch data. Response status: ${response.status}`);
+            }
+        })
+        .then(data => {
+            displayWeatherData(data);
+        })
+        .catch(error => {
+            showError(error.message);
+        });
 }
-
+// DISPLAY FUNCTIONS ---------------------------------------------------------------------------------------------------------------------------------------------------------
 function displayCurrentData(data){
     document.querySelector('#errorC').textContent = '';
     document.querySelector('#temperatureC').textContent = `Temperature: ${data.current.temp_c}°C / ${data.current.temp_f}°F`;
