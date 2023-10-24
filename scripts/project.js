@@ -31,7 +31,7 @@ function displayWeatherData(data) {
     document.querySelector('#location').textContent = `Location: ${data.location.name}, ${data.location.country}`;
     document.querySelector('#error').textContent = '';
     // CURRENT DATA
-    document.querySelector('#temperature').textContent = `Temperature: ${data.current.temp_c}°C/${data.current.temp_f}°F`;
+    document.querySelector('#temperature').textContent = `Temperature: ${data.current.temp_c}°C/${data.current.temp_f}°FF`;
     document.querySelector('#description').textContent = `Conditions: ${data.current.condition.text}`;
     document.querySelector('#weatherIcon').src = data.current.condition.icon;
     // FORECAST DATA
