@@ -101,9 +101,9 @@ function displayCurrentData(data){
 function displayWeatherData(data) {
     document.querySelector('#location').textContent = `Location: ${data.location.name}, ${data.location.country}`;
     document.querySelector('#error').textContent = '';
-    document.querySelector('#temperature').textContent = `Temperature: ${data.current.temp_c}°C / ${data.current.temp_f}°F`;
-    document.querySelector('#description').textContent = `Conditions: ${data.current.condition.text}`;
-    document.querySelector('#weatherIcon').src = data.current.condition.icon;
+    document.querySelector('#temperature').textContent = `Temperature: ${data.forecast.maxtemp_c}°C / ${data.forecast.forecastday.maxtemp_f}°F`;
+    document.querySelector('#description').textContent = `Conditions: ${data.forecast.forecastday.condition.text}`;
+    document.querySelector('#weatherIcon').src = data.forecast.forecastday.condition.icon;
 }
 
 function showError(message) {
