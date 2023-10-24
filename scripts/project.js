@@ -5,45 +5,90 @@ document.querySelector('#fetchWeather').addEventListener('click', () => {
     const location = document.querySelector('#locationInput').value;
     getWeatherData(location);
 });
+// ... (previous code)
 
 function getWeatherData(location) {
-    // Construct the WeatherAPI API URL
-                    // http://api.weatherapi.com/v1/forecast.json?key=%20b972ab33e7e440efa30215736232210&q=83440      &days=1&aqi=no&alerts=no
+    // Construct the WeatherAPI API URL for current data
     const apiUrlC = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`;
 
-    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=1&aqi=no&alerts=no`;
-// FETCH I ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+    // FETCH for current data
     fetch(apiUrlC)
         .then(response => {
             if (response.status === 200) {
                 return response.json();
             } else {
-                throw new Error(`Failed to fetch data. Response status: ${response.status}`);
+                throw new Error(`Failed to fetch current data. Response status: ${response.status}`);
             }
         })
         .then(data => {
+            // Display current data
             displayCurrentData(data);
+
+            // Now fetch forecast data (similar to your existing code)
+            const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=1&aqi=no&alerts=no`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (response.status === 200) {
+                        return response.json();
+                    } else {
+                        throw new Error(`Failed to fetch forecast data. Response status: ${response.status}`);
+                    }
+                })
+                .then(forecastData => {
+                    // Display forecast data
+                    displayWeatherData(forecastData);
+                })
+                .catch(error => {
+                    showError(error.message);
+                });
         })
         .catch(error => {
-            showError(error.message);
-        });
-// FETCH II ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    fetch(apiUrl)
-        .then(response => {
-            if (response.status === 200) {
-                return response.json();
-            } else {
-                throw new Error(`Failed to fetch data. Response status: ${response.status}`);
-            }
-        })
-        .then(data => {
-            displayWeatherData(data);
-        })
-        .catch(error => {
-            showError(error.message);
+            showErrorC(error.message);
         });
 }
+
+// ... (rest of your code)
+// COMMMENT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// function getWeatherData(location) {
+//     // Construct the WeatherAPI API URL
+//                     // http://api.weatherapi.com/v1/forecast.json?key=%20b972ab33e7e440efa30215736232210&q=83440      &days=1&aqi=no&alerts=no
+    
+//     const apiUrlC = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`;
+//     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=1&aqi=no&alerts=no`;
+// // FETCH I ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//     fetch(apiUrlC)
+//         .then(response => {
+//             if (response.status === 200) {
+//                 return response.json();
+//             } else {
+//                 throw new Error(`Failed to fetch data. Response status: ${response.status}`);
+//             }
+//         })
+//         .then(data => {
+//             displayCurrentData(data);
+//         })
+//         .catch(error => {
+//             showError(error.message);
+//         });
+// // FETCH II ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//     fetch(apiUrl)
+//         .then(response => {
+//             if (response.status === 200) {
+//                 return response.json();
+//             } else {
+//                 throw new Error(`Failed to fetch data. Response status: ${response.status}`);
+//             }
+//         })
+//         .then(data => {
+//             displayWeatherData(data);
+//         })
+//         .catch(error => {
+//             showError(error.message);
+//         });
+// }
+// COMMMENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // DISPLAY FUNCTIONS ---------------------------------------------------------------------------------------------------------------------------------------------------------
 function displayCurrentData(data){
     document.querySelector('#errorC').textContent = '';
