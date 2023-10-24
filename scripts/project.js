@@ -55,7 +55,7 @@ function getWeatherData(location) {
 //                     // http://api.weatherapi.com/v1/forecast.json?key=%20b972ab33e7e440efa30215736232210&q=83440      &days=1&aqi=no&alerts=no
     
 //     const apiUrlC = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`;
-//     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=1&aqi=no&alerts=no`;
+//     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=4&aqi=no&alerts=no`;
 // // FETCH I ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //     fetch(apiUrlC)
