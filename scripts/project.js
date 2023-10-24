@@ -27,8 +27,6 @@ function getWeatherData(location) {
         .catch(error => {
             showError(error.message);
         });
-}
-
     fetch(apiUrlC)
         .then(response => {
             if (response.status === 200) {
@@ -43,6 +41,8 @@ function getWeatherData(location) {
         .catch(error => {
             showError(error.message);
         });
+}
+
 }
 function displayCurrentData(data){
     document.querySelector('#errorC').textContent = '';
