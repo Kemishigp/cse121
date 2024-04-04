@@ -35,8 +35,8 @@ function displayWeatherData(data) {
     document.querySelector('#description').textContent = `Conditions: ${data.current.condition.text}`;
     document.querySelector('#weatherIcon').src = data.current.condition.icon;
     // FORECAST DATA
-    document.querySelector('#temperatureMax').textContent = `Max Temperature: ${data.forecast.forecastday[0].date}°C/${data.forecast.forecastday[0].day.maxtemp_f}°F`;
-    document.querySelector('#temperatureMin').textContent = `Min Temperature: ${data.forecast.forecastday[0].day[1].mintemp_c}°C/${data.forecast.forecastday[0].day[0].mintemp_f}°F`;
+    document.querySelector('#temperatureMax').textContent = `Max Temperature: ${data.forecast.forecastday[0].day.maxtemp_c}°C/${data.forecast.forecastday[0].day.maxtemp_f}°F`;
+    document.querySelector('#temperatureMin').textContent = `Min Temperature: ${data.forecast.forecastday[0].day.mintemp_c}°C/${data.forecast.forecastday[0].day.mintemp_f}°F`;
     document.querySelector('#descriptionF').textContent = `Conditions: ${data.forecast.forecastday[0].day.condition.text}`;
     document.querySelector('#weatherIconF').src = data.forecast.forecastday[0].day.condition.icon;
 }
