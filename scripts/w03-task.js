@@ -63,13 +63,12 @@ document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2)
 
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
-
+/* STEP 6 */
 /* Decision Structure */
 const currentDate = new Date();
 const currentYear = new Date().getFullYear();
 
 document.getElementById("year").value = currentYear;
-
 
 
 /* FUNCTIONS */
@@ -90,7 +89,7 @@ function getTotalDue() {
     }
 
     // Output the total to the total span in the format shown with two decimals using a template string
-    document.querySelector('#total').innerHTML = `Total Due: $${subtotal.toFixed(2)}`;
+    document.querySelector('#total').innerHTML = `$${subtotal.toFixed(2)}`; // Display only the dollar sign followed by the amount
 }
 
 // Your existing array methods and other code
@@ -98,6 +97,9 @@ function getTotalDue() {
 
 
 
+
+
+/* STEP 7 */
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
