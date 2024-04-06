@@ -32,8 +32,7 @@ const displayTemples = (temples) => {
   // Call the function with the array of temples
 //   displayTemples(temples);
 //   DIFF E
-  
-  
+
 
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
@@ -60,10 +59,6 @@ const getTemples = async () => {
     }
   };
 
-  // Call the getTemples function to fetch and populate temple data
-  // getTemples();
-
-
 
 /* reset Function */
 const reset = () => {
@@ -73,15 +68,14 @@ const reset = () => {
       article.remove();
     });
   };
-  
 
-/* sortBy Function */
-const sortBy = (temples) => {
+/* filterTemples Function */
+const filterTemples = (temples) => {
     // Step 1: Call the reset function to clear the output
     reset();
   
-    // Step 2: Obtain the value of the HTML select element with ID "sortBy"
-    const filter = document.querySelector("#sortBy").value;
+    // Step 2: Obtain the value of the HTML select element with ID "filtered"
+    const filter = document.querySelector("#filtered").value;
   
     // Step 3: Use a switch statement to filter the temples based on the selected option
     switch (filter) {
@@ -105,12 +99,10 @@ const sortBy = (temples) => {
         break;
     }
   };
-  
-  // Step 4: Event Listener - sortBy Element change
-  document.querySelector("#sortBy").addEventListener("change", () => {
-    sortBy(templeList);
-  });
-  
-
 
 getTemples();
+
+/* Event Listener */
+
+document.querySelector("#filtered").addEventListener("change", () => { 
+    filterTemples(templeList) });
